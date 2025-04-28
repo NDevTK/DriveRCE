@@ -1,0 +1,17 @@
+
+{
+  "name": "poc",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://drive.google.com/*"],
+  "permissions": ["scripting"],
+  "content_scripts": [
+   {
+     "matches": ["https://drive.google.com/*"],
+     "js": ["code.js"]
+   }
+ ]
+}
